@@ -1,0 +1,21 @@
+INSERT INTO maker (id, full_name, country) VALUES (1, 'Asus', 'Taiwan');
+INSERT INTO maker (id, full_name, country) VALUES (2, 'lenovo', 'China');
+INSERT INTO maker (id, full_name, country) VALUES (3, 'Apple', 'USA');
+INSERT INTO maker (id, full_name, country) VALUES (4, 'Samsung', 'Korea');
+INSERT INTO maker (id, full_name, country) VALUES (5, 'Sony', 'Japan');
+INSERT INTO maker (id, full_name, country) VALUES (6, 'HP', 'USA');
+INSERT INTO maker (id, full_name, country) VALUES (7, 'Dell', 'USA');
+INSERT INTO maker (id, full_name, country) VALUES (8, 'Acer', 'Taiwan');
+INSERT INTO maker (id, full_name, country) VALUES (9, 'MSI', 'Taiwan');
+
+INSERT INTO products (id, name, price, category, maker_id) VALUES (1, 'Zenbook', 'Tablet' 1000, 1);
+INSERT INTO products (id, name, price, category, maker_id) VALUES (2, 'Yoga', 'Computer' 800, 2);
+INSERT INTO products (id, name, price, category, maker_id) VALUES (3, 'Macbook', 'Computer' 1500, 3);
+INSERT INTO products (id, name, price, category, maker_id) VALUES (4, 'Galaxy', 'Cellphone' 700, 4);
+INSERT INTO products (id, name, price, category, maker_id) VALUES (5, 'Xperia', 'Cellphone' 600, 5);
+INSERT INTO products (id, name, price, category, maker_id) VALUES (6, 'Pavilion', 'Computer' 500, 6);
+INSERT INTO products (id, name, price, category, maker_id) VALUES (7, 'Inspiron', 'Computer' 400, 7);
+INSERT INTO products (id, name, price, category, maker_id) VALUES (8, 'Swift', 'Tablet' 300, 8);
+INSERT INTO products (id, name, price, category, maker_id) VALUES (9, 'GS', 'Computer' 900, 9);
+INSERT INTO products (id, name, price, category, maker_id) VALUES (10, 'Zenfone', 'Cellphone' 400, 1);
+INSERT INTO products (id, name, price, category, maker_id) VALUES (11, 'Iphone', 'Cellphone' 1000, 3);
