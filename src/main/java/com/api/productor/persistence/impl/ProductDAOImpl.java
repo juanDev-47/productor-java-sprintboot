@@ -26,7 +26,7 @@ public class ProductDAOImpl implements IProductDAO {
     }
 
     public List<Product> findByPriceInRange(BigDecimal min, BigDecimal max) {
-        return (List<Product>) productRepository.findByPriceBetween(min, max);
+        return (List<Product>) productRepository.findProductByPriceBetween(min, max);
     }
 
     public void save(Product product) {
