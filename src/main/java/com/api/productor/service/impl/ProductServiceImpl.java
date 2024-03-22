@@ -18,7 +18,7 @@ public class ProductServiceImpl implements IProductService {
 
     @Override
     public Optional<Product> findById(long id) {
-        return productDAO.findById(id);
+        return Optional.of(productDAO.findById(id).get());
     }
 
     @Override

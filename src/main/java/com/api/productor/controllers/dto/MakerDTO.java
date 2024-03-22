@@ -15,12 +15,8 @@ import java.util.List;
 @Builder
 public class MakerDTO {
     private long id;
-
     private String fullName;
-
     private String country;
-
     private String description;
-
     private List<Product> products = new ArrayList<>();
 }

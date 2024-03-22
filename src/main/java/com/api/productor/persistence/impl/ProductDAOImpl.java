@@ -18,7 +18,7 @@ public class ProductDAOImpl implements IProductDAO {
     private ProductRepository productRepository;
 
     public Optional<Product> findById(long id) {
-        return productRepository.findById(id);
+        return Optional.of(productRepository.findById(id).get());
     }
 
     public List<Product> findAll() {
