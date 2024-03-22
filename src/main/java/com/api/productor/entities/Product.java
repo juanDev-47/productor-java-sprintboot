@@ -1,5 +1,6 @@
 package com.api.productor.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -25,5 +26,6 @@ public class Product {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "maker_id", nullable = false)
+    @JsonIgnore
     private Maker maker;
 }
