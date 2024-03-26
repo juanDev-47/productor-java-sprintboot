@@ -3,6 +3,7 @@ package com.api.productor.controllers;
 import com.api.productor.controllers.dto.ProductDTO;
 import com.api.productor.entities.Product;
 import com.api.productor.service.IProductService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -48,7 +49,7 @@ public class ProductController {
     }
 
     @PostMapping("/save")
-    public ResponseEntity<?> save(@RequestBody ProductDTO productDTO) throws URISyntaxException {
+    public ResponseEntity<?> save(@RequestBody @Valid ProductDTO productDTO) throws URISyntaxException {
         if(productDTO.getName().isBlank() || productDTO.getPrice() == null || productDTO.getMaker() == null)
             return ResponseEntity.badRequest().build();
 
@@ -68,7 +69,7 @@ public class ProductController {
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<?> update(@PathVariable Long id, @RequestBody ProductDTO productDTO) {
+    public ResponseEntity<?> update(@PathVariable Long id, @RequestBody @Valid ProductDTO productDTO) {
         Optional<Product> productOptional = productService.findById(id);
         if (productOptional.isPresent()) {
             Product product = productOptional.get();

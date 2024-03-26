@@ -3,6 +3,7 @@ package com.api.productor.controllers;
 import com.api.productor.controllers.dto.MakerDTO;
 import com.api.productor.entities.Maker;
 import com.api.productor.service.IMakerService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -50,7 +51,7 @@ public class MakerController {
     }
 
     @PostMapping("/save")
-    public ResponseEntity<?> save(@RequestBody MakerDTO makerDTO) throws URISyntaxException {
+    public ResponseEntity<?> save(@RequestBody @Valid MakerDTO makerDTO) throws URISyntaxException {
         if(makerDTO.getFullName().isBlank() || makerDTO.getCountry().isBlank())
             return ResponseEntity.badRequest().build();
 
@@ -64,7 +65,7 @@ public class MakerController {
     }
 
     @PutMapping("/update/{id}")
-    public ResponseEntity<?> update(@PathVariable Long id, @RequestBody MakerDTO makerDTO) {
+    public ResponseEntity<?> update(@PathVariable Long id, @RequestBody @Valid MakerDTO makerDTO) {
         Optional<Maker> makerOptional = makerService.findById(id);
         if (makerOptional.isPresent()) {
             Maker maker = makerOptional.get();
