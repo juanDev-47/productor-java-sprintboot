@@ -24,7 +24,7 @@ public class Product {
     private BigDecimal price;
     private String category;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne(cascade = CascadeType.MERGE)
     @JoinColumn(name = "maker_id", nullable = false)
     @JsonIgnore
     private Maker maker;

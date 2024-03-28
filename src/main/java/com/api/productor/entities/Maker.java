@@ -28,7 +28,7 @@ public class Maker {
 
     private String description;
 
-    @OneToMany(mappedBy = "maker", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "maker", fetch = FetchType.LAZY, cascade = CascadeType.MERGE, orphanRemoval = true)
     @JsonIgnore
     private List<Product> products = new ArrayList<>();
 

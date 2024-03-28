@@ -21,7 +21,7 @@ public class ProductDTO {
     private long id;
     @NotNull(message = "The name is required")
     private String name;
-    @Max(100)
+
     private String description;
     @NotNull(message = "The price is required")
     @Digits(integer = 10, fraction = 2, message = "The price is not valid")

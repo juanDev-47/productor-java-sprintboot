@@ -56,6 +56,8 @@ public class ProductController {
         Product product = Product.builder()
                 .name(productDTO.getName())
                 .price(productDTO.getPrice())
+                .description(productDTO.getDescription())
+                .category(productDTO.getCategory())
                 .maker(productDTO.getMaker())
                 .build();
         productService.save(product);
@@ -65,7 +67,7 @@ public class ProductController {
     @DeleteMapping("/{id}")
     public ResponseEntity<?> deleteById(@PathVariable Long id) {
         productService.deleteById(id);
-        return ResponseEntity.noContent().build();
+        return ResponseEntity.ok().build();
     }
 
     @PutMapping("/update/{id}")

@@ -2,6 +2,7 @@ package com.api.productor.controllers.dto;
 
 import com.api.productor.entities.Product;
 import jakarta.validation.constraints.Max;
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -19,13 +20,14 @@ import java.util.List;
 @Builder
 public class MakerDTO {
     private long id;
-    @NotNull(message = "The full name is required")
-    @Max(100)
+
+    @NotNull(message = "The full name is required, can't be null")
+    @NotBlank(message = "The full name can't be blank")
     private String fullName;
-    @NotNull(message = "The country is required")
-    @Max(100)
+
+    @NotNull(message = "The country is required, can't be null")
+    @NotBlank(message = "The country can't be blank")
     private String country;
-    @Max(100)
     private String description;
     private List<Product> products = new ArrayList<>();
 
