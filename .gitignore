@@ -89,3 +89,5 @@ nb-configuration.xml
 ##############################
 *.log
 .env
+*.xlsx
+src/main/resources/application.properties
