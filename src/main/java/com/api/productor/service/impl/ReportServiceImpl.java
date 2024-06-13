@@ -39,7 +39,7 @@ public class ReportServiceImpl implements IReportService {
         // 4) create columns
         Cell nombre = cabecera.createCell(1);
         Cell edad = cabecera.createCell(2);
-        Cell ciudad = cabecera.createCell(2);
+        Cell ciudad = cabecera.createCell(3);
 
         nombre.setCellValue("Nombre");
         edad.setCellValue("Edad");
