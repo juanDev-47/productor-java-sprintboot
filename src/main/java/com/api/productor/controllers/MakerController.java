@@ -44,7 +44,7 @@ public class MakerController {
                 .fullName(maker.getFullName())
                 .country(maker.getCountry())
                 .description(maker.getDescription())
-                .products(maker.getProducts())
+//                .products(maker.getProducts())
                 .build()).toList();
 
         return ResponseEntity.ok(makerDTOS);

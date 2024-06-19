@@ -10,6 +10,7 @@ import java.util.List;
 
 @Getter
 @Setter
+@EqualsAndHashCode(exclude = {"products"})
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
@@ -28,7 +29,8 @@ public class Maker {
 
     private String description;
 
-    @OneToMany(mappedBy = "maker", fetch = FetchType.LAZY, cascade = CascadeType.MERGE, orphanRemoval = true)
+//    bidirectional relationship
+    @OneToMany(mappedBy = "maker", fetch = FetchType.LAZY, cascade = CascadeType.ALL, orphanRemoval = true)
     @JsonIgnore
     private List<Product> products = new ArrayList<>();
 

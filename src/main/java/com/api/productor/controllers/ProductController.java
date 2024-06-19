@@ -31,7 +31,7 @@ public class ProductController {
                 .id(product.getId())
                 .name(product.getName())
                 .price(product.getPrice())
-                .maker(product.getMaker())
+//                .maker(product.getMaker())
                 .build();
         return ResponseEntity.ok(productDTO);
     }
@@ -42,7 +42,7 @@ public class ProductController {
                 .id(product.getId())
                 .name(product.getName())
                 .price(product.getPrice())
-                .maker(product.getMaker())
+//                .maker(product.getMaker())
                 .build()).toList();
 
         return ResponseEntity.ok(productDTOS);
@@ -77,7 +77,7 @@ public class ProductController {
             Product product = productOptional.get();
             product.setName(productDTO.getName());
             product.setPrice(productDTO.getPrice());
-            product.setMaker(productDTO.getMaker());
+//            product.setMaker(productDTO.getMaker());
             productService.save(product);
             return ResponseEntity.ok().build();
         }
