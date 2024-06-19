@@ -26,6 +26,7 @@ public class Product {
 
 //    bidirectional relationship
     @ManyToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "maker_id")
     @JsonIgnore
     private Maker maker;
 }

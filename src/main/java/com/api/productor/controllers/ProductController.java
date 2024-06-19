@@ -31,7 +31,7 @@ public class ProductController {
                 .id(product.getId())
                 .name(product.getName())
                 .price(product.getPrice())
-//                .maker(product.getMaker())
+                .maker(product.getMaker())
                 .build();
         return ResponseEntity.ok(productDTO);
     }
